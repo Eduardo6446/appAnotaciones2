@@ -5,59 +5,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="@dimen/dimen2"
-            android:layout_height="wrap_content"
-            android:hint="@string/strIngresarTarea"
-            app:counterEnabled="true"
-            app:counterMaxLength="@integer/descripcion_maxlength"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <ImageButton
+        android:id="@+id/btnAgregar"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="53dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boton"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvDescripcionTarea"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:imeOptions="actionDone"
-                android:inputType="textCapCharacters"
-                android:maxLength="@integer/descripcion_maxlength" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btnAgregar"
-            android:layout_width="@dimen/dimen3"
-            android:layout_height="@dimen/dimen3"
-            android:layout_marginStart="308dp"
-            android:layout_marginTop="12dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
-            android:src="@drawable/boton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="431dp"
-        android:layout_height="606dp"
-        android:padding="@dimen/dimen1"
+    <TextView
+        android:id="@+id/tvPrueba1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_notas" />
-
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvPrueba2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
